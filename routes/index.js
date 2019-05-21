@@ -16,7 +16,7 @@ router.all('*', function(req, res, next) {
 
     //     header信息 Access-Control-Allow-Credentials:true
     // Access-Control-Allow-Origin不可以为 '*'，因为 '*' 会和 Access-Control-Allow-Credentials:true 冲突，需配置指定的地址
-    if( req.headers.origin == 'http://localhost:8081' || req.headers.origin == 'http://localhost:8080' ){ 
+    if( req.headers.origin == 'http://localhost:8081' || req.headers.origin == 'http://localhost:8080' || req.headers.origin == 'http://www.oldzhao.cn:3000'){ 
         res.header('Access-Control-Allow-Origin', req.headers.origin);
         // res.header("Access-Control-Allow-Origin", "*");
         //Access-Control-Allow-Headers ,可根据浏览器的F12查看,把对应的粘贴在这里就行
